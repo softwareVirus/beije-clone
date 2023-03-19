@@ -2,6 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Roboto } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import Header from '@/components/Header'
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '@/Theme/theme'
 
 const roboto = Roboto({
   weight: ['400', '500', '700'],
@@ -19,7 +22,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        
+        <ThemeProvider theme={theme}>
+          <Header/>
+        </ThemeProvider>
       </main>
     </>
   )
