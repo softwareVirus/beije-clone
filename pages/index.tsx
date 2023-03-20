@@ -1,16 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Roboto } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Header from '@/components/Header'
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/Theme/theme'
 
-const roboto = Roboto({
-  weight: ['400', '500', '700'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-})
 
 export default function Home() {
   return (
@@ -25,9 +19,6 @@ export default function Home() {
         <ThemeProvider theme={theme}>
           <Header/>
           <>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.

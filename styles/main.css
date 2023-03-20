@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Gordita Medium"), url("./fonts/Gordita_Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gordita";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Gordita Regular"), url("./fonts/Gordita_Regular.woff") format("woff");
+}
