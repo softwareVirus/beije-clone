@@ -92,4 +92,4 @@ const CustomContextProvider = ({ children }: CustomContextProviderProps) => {
   );
 };
 
-export default CustomContextProvider;
+export { CustomContextProvider, PadContext, DailyPadContext, TamponContext };

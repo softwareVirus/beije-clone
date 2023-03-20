@@ -17,6 +17,13 @@ const theme = createTheme({
         borderBottom: "1px solid rgba(0, 0, 0, 0.9)",
         transition: "all 0.5s ease 0s",
       }
+    },
+    h3: {
+      margin: 0,
+      fontWeight: 500,
+      fontSize: '1.725rem',
+      color: 'rgba(0, 0, 0, 0.9)',
+      lineHeight: '130%'
     }
   },
   breakpoints: {
@@ -27,6 +34,34 @@ const theme = createTheme({
       lg: 1152,
       xl: 2300,
     },
+  },
+  components: {
+    MuiTabs: {
+      styleOverrides: {
+        scroller: {
+          width: '100%'
+        },
+        indicator: {
+          backgroundColor:'rgb(52, 49, 49) !important',
+        }
+      }
+    },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          color:'rgb(52, 49, 49) !important',
+          flex: '1 1 0px',
+          fontWeight: 500,
+          letterSpacing: '-0.03em'
+        }
+      }
+    }
+  },
+  palette: {
+    primary: {
+      main: 'rgb(52, 49, 49)'
+    }
   }
 });
 

@@ -4,6 +4,7 @@ import styles from '@/styles/Home.module.css'
 import Header from '@/components/Header'
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/Theme/theme'
+import Section from '@/components/Section';
 
 
 export default function Home() {
@@ -15,10 +16,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main style={{backgroundColor: 'white'}}>
         <ThemeProvider theme={theme}>
           <Header/>
+          <Section />
           <>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
