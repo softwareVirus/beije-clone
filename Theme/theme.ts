@@ -21,9 +21,17 @@ const theme = createTheme({
     h3: {
       margin: 0,
       fontWeight: 500,
-      fontSize: '1.725rem',
+      fontSize: '1.75rem',
       color: 'rgba(0, 0, 0, 0.9)',
-      lineHeight: '130%'
+      lineHeight: '130%',
+      letterSpacing: '-0.0175em'
+    },
+    body2: {
+      fontWeight: 400,
+      fontSize: '0.875rem',
+      lineHeight: '1.375rem',
+      color: 'rgba(0, 0, 0, 0.6)',
+      display: 'flex'
     }
   },
   breakpoints: {
@@ -43,6 +51,7 @@ const theme = createTheme({
         },
         indicator: {
           backgroundColor:'rgb(52, 49, 49) !important',
+          height:3
         }
       }
     },
@@ -50,10 +59,30 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: 'none',
-          color:'rgb(52, 49, 49) !important',
+          color:'rgba(0, 0, 0, 0.6)',
           flex: '1 1 0px',
           fontWeight: 500,
           letterSpacing: '-0.03em'
+        }
+      }
+    },
+    MuiButton: {
+      styleOverrides: {
+        contained: {
+          textTransform: 'none',
+          width: '100%',
+          lineHeight: '162%',
+          borderRadius: '64px',
+          padding: '12px 22px 10px',
+          fontSize:'1rem'
+        },
+        text: {
+          borderRadius: '64px',
+          textTransform: 'none',
+          padding: '10px 0px 8px',
+          fontSize: '0.875rem',
+          lineHeight: '171%',
+          letterSpacing: '-0.01em'
         }
       }
     }

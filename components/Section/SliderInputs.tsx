@@ -76,7 +76,7 @@ const SliderInputs = () => {
   };
   return (
     <Box sx={{ ...styles.displayBox, ...styles.firstBox }}>
-      <Box sx={{ ...styles.displayBox, gap: "1.5rem" }}>
+      <Box sx={{ ...styles.displayBox, gap: "1.5rem",mb:3.125 }}>
         <Box
           sx={{
             ...styles.displayBox,
@@ -85,9 +85,16 @@ const SliderInputs = () => {
             justifyContent: "space-between",
           }}
         >
-          <Typography variant="h3">Kendi Paketini Oluştur!</Typography>
+          <Typography variant="h3">Kendi Paketini Oluştur</Typography>
           <MuiLink href="/" component={Link} underline="none" color={"inherit"}>
-            <Typography>Nasıl Çalışır?</Typography>
+            <Typography
+              sx={{
+                letterSpacing: "-0.03em",
+                lineHeight: "165%",
+              }}
+            >
+              Nasıl Çalışır?
+            </Typography>
           </MuiLink>
         </Box>
         <Typography sx={{ cursor: "auto" }} color="rgba(0, 0, 0, 0.6)">
@@ -98,7 +105,7 @@ const SliderInputs = () => {
       </Box>
       <Grid sx={{ ...styles.inputBox, width: "100%" }}>
         <Grid sx={{ width: "100%", padding: 0 }}>
-          <Grid sx={{ borderBottom: 1, borderColor: "divider" }}>
+          <Grid>
             <Tabs
               value={value}
               onChange={handleChange}

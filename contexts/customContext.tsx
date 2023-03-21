@@ -5,25 +5,11 @@ import {
   SetStateAction,
   useState,
 } from "react";
-
+import { padProperties } from "@/types/order";
+import { dailyPadProperties } from "@/types/order";
+import { tamponProperties } from "@/types/order";
 interface CustomContextProviderProps {
   children: ReactNode;
-}
-
-interface padProperties {
-  standardPad: number;
-  superPad: number;
-  superPlusPad: number;
-}
-
-interface dailyPadProperties {
-  dailyPad: number;
-  superDailyPad: number;
-}
-
-interface tamponProperties {
-  miniTampon: number;
-  standardTampon: number;
 }
 
 interface padContextProps {

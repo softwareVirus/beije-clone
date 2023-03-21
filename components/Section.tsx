@@ -1,7 +1,9 @@
 import React from 'react'
 import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import Container from '@mui/material/Container'
 import SliderInputs from './Section/SliderInputs';
+import DisplayOrder from './Section/DisplayOrder';
 
 const Section = () => {
   return (
@@ -12,18 +14,20 @@ const Section = () => {
       },
       display:'flex',
       width:'100%',
-      height: '100%'
+      height: '100%',
+      backgroundColor: 'rgb(249, 245, 242)'
     }}>
       <Container maxWidth="lg" sx={{
-        padding: {
-          sm: '0 24px',
-          xs: '0 16px'
-        },
-        margin: '0 auto'
+        margin: '0 auto',
+        p:'0 !important'
       }}>
-        <Box>
+        <Grid container justifyContent={'space-between'} sx={{
+          padding: '152px 0px 96px !important',
+          width: '100%'
+        }}>
           <SliderInputs />
-        </Box>
+          <DisplayOrder />
+        </Grid>
       </Container>
     </Box>
   )

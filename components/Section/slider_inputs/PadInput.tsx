@@ -59,7 +59,7 @@ const PadInput = () => {
 
   console.log(padInputs);
   return (
-    <Grid sx={{ ...styles.displayBox, gap: "1.5rem", width: "100%", mt: 5 }}>
+    <Grid sx={{ ...styles.displayBox, gap: "0", width: "100%", mt: 5 }}>
       <Grid sx={{ width: "100%" }}>
         <Typography sx={{ height: 42 }}>Standart Ped</Typography>
         <Slider
