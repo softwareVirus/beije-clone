@@ -75,8 +75,21 @@ const SliderInputs = () => {
     setValue(newValue);
   };
   return (
-    <Box sx={{ ...styles.displayBox, ...styles.firstBox }}>
-      <Box sx={{ ...styles.displayBox, gap: "1.5rem",mb:3.125 }}>
+    <Box
+      sx={{
+        ...styles.displayBox,
+        ...styles.firstBox,
+        width: {
+          md: "564px",
+          xs: "100%",
+        },
+        padding: {
+          md: 0,
+          xs: '40px 27px'
+        }
+      }}
+    >
+      <Box sx={{ ...styles.displayBox, gap: "1.5rem", mb: 3.125 }}>
         <Box
           sx={{
             ...styles.displayBox,

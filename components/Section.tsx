@@ -4,8 +4,12 @@ import Grid from "@mui/material/Grid";
 import Container from '@mui/material/Container'
 import SliderInputs from './Section/SliderInputs';
 import DisplayOrder from './Section/DisplayOrder';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 
 const Section = () => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('md'));
   return (
     <Box component={'main'} sx={{
       paddingTop: {
@@ -26,7 +30,11 @@ const Section = () => {
           width: '100%'
         }}>
           <SliderInputs />
-          <DisplayOrder />
+          {
+            matches
+            &&
+            <DisplayOrder />
+          }
         </Grid>
       </Container>
     </Box>
