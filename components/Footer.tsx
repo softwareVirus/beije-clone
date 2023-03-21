@@ -4,6 +4,7 @@ import { styles } from "@/utils/style";
 import EmailSection from "./Footer/EmailSection";
 import BeijeLinks from "./Footer/BeijeLinks";
 import SocialMediaLinks from "./Footer/SocialMediaLinks";
+import BottomSection from "./Footer/BottomSection";
 
 const Footer = () => {
   return (
@@ -51,6 +52,7 @@ const Footer = () => {
             <SocialMediaLinks />
           </Box>
         </Box>
+        <BottomSection />
       </Box>
     </Grid>
   );
