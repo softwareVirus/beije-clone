@@ -3,6 +3,7 @@ import { Grid, Box } from "@mui/material";
 import { styles } from "@/utils/style";
 import EmailSection from "./Footer/EmailSection";
 import BeijeLinks from "./Footer/BeijeLinks";
+import SocialMediaLinks from "./Footer/SocialMediaLinks";
 
 const Footer = () => {
   return (
@@ -35,8 +36,19 @@ const Footer = () => {
           }
         }}>
           <EmailSection />
-          <Box>
+          <Box sx={{
+            display:'flex',
+            flexDirection: {
+              md:'row',
+              xs: 'column'
+            },
+            gap: {
+              md:'24px',
+              xs:'40px'
+            }
+          }}>
             <BeijeLinks />
+            <SocialMediaLinks />
           </Box>
         </Box>
       </Box>

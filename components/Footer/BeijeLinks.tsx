@@ -45,7 +45,7 @@ const BeijeLinks = () => {
         return (
           <Grid sx={{ cursor: "pointer", color: "white",height:'32px' }} key={item + index}>
             <MuiLink
-              href={linkDirections[index][0]}
+              href={linkDirections[index][1]}
               target={linkDirections[index][0]}
               component={Link}
               sx={{
