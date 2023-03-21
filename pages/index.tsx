@@ -22,62 +22,6 @@ export default function Home() {
           <Header/>
           <Section />
           <Footer />
-          <>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt ea necessitatibus quam consectetur magni quidem quo, eaque aut perspiciatis deleniti omnis cupiditate odio laborum nisi illo dicta itaque amet nam.
-          </>
         </ThemeProvider>
       </main>
     </>
