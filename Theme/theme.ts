@@ -32,6 +32,13 @@ const theme = createTheme({
       lineHeight: '1.375rem',
       color: 'rgba(0, 0, 0, 0.6)',
       display: 'flex'
+    },
+    subtitle1: {
+      fontWeight: 500,
+      fontSize: '1rem',
+      lineHeight: '160%',
+      letterSpacing: '-0.01em',
+      color: 'rgba(255, 255, 255, 0.698)'
     }
   },
   breakpoints: {
@@ -83,6 +90,42 @@ const theme = createTheme({
           fontSize: '0.875rem',
           lineHeight: '171%',
           letterSpacing: '-0.01em'
+        }
+      }
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          border: '1px solid rgba(255, 255, 255, 0.23)',
+          borderRadius: '0.5rem !important'
+        }
+      }
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          height: '40px !important',
+          borderRadius: '0.5rem !important'
+        },
+        input: {
+          padding: '8.5px 14px !important',
+          color: 'rgba(255, 255, 255, 0.698)'
+        }
+      }
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          color: 'rgba(255, 255, 255, 0.698) !important',
+          backgroundColor: 'rgb(38, 38, 38)',
+          //transform: 'translate(14px, 9px) scale(1)'
+        }
+      }
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        notchedOutline: {
+          color: 'rgba(255, 255, 255, 0.698)'
         }
       }
     }

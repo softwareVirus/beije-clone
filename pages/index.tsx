@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import { ThemeProvider } from '@mui/material/styles';
 import theme from '@/Theme/theme'
 import Section from '@/components/Section';
+import Footer from '@/components/Footer';
 
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <ThemeProvider theme={theme}>
           <Header/>
           <Section />
+          <Footer />
           <>
           <br/>
           <br/>
