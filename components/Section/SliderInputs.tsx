@@ -91,9 +91,8 @@ const SliderInputs = () => {
             </Typography>
           </MuiLink>
         </Box>
-        <Typography sx={{ cursor: "auto" }} color="rgba(0, 0, 0, 0.6)">
+        <Typography sx={{ cursor: "auto", whiteSpace: 'break-spaces' }} color="rgba(0, 0, 0, 0.6)">
           Tercih ve ihtiyaçların doğrultusunda seçeceğin ürünlerden ve
-          <br />
           miktarlardan, sana özel bir paket oluşturalım.
         </Typography>
       </Box>
