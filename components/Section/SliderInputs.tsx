@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
-import { Link as MuiLink, Grid, Slider } from "@mui/material";
+import { Link as MuiLink, Grid, Slider, Button } from "@mui/material";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import PadInput from "./slider_inputs/PadInput";
 import DailyPadInput from "./slider_inputs/DailyPadInput";
 import TamponInput from "./slider_inputs/TamponInput";
 import { styles } from "@/utils/style";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 const marks = [
   {
@@ -52,6 +54,8 @@ function a11yProps(index: number) {
 
 const SliderInputs = () => {
   const [value, setValue] = useState<number>(0);
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down("md"));
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
@@ -66,8 +70,8 @@ const SliderInputs = () => {
         },
         padding: {
           md: 0,
-          xs: '40px 27px'
-        }
+          xs: "40px 27px",
+        },
       }}
     >
       <Box sx={{ ...styles.displayBox, gap: "1.5rem", mb: 3.125 }}>
@@ -91,7 +95,10 @@ const SliderInputs = () => {
             </Typography>
           </MuiLink>
         </Box>
-        <Typography sx={{ cursor: "auto", whiteSpace: 'break-spaces' }} color="rgba(0, 0, 0, 0.6)">
+        <Typography
+          sx={{ cursor: "auto", whiteSpace: "break-spaces" }}
+          color="rgba(0, 0, 0, 0.6)"
+        >
           Tercih ve ihtiyaçların doğrultusunda seçeceğin ürünlerden ve
           miktarlardan, sana özel bir paket oluşturalım.
         </Typography>
@@ -120,6 +127,11 @@ const SliderInputs = () => {
           </TabPanel>
         </Grid>
       </Grid>
+      {matches && (
+        <Button variant="contained" color="primary">
+          Paketi Gör
+        </Button>
+      )}
     </Box>
   );
 };
