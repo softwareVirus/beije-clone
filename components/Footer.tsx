@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, Box } from "@mui/material";
 import { styles } from "@/utils/style";
 import EmailSection from "./Footer/EmailSection";
+import BeijeLinks from "./Footer/BeijeLinks";
 
 const Footer = () => {
   return (
@@ -23,9 +24,20 @@ const Footer = () => {
         }}
       >
         <Box sx={{
-          ...styles.displayBox
+          ...styles.displayBox,
+          gap: {
+            md:'32px',
+            xs:'40px'
+          },
+          flexDirection: {
+            md:'row',
+            xs: 'column'
+          }
         }}>
           <EmailSection />
+          <Box>
+            <BeijeLinks />
+          </Box>
         </Box>
       </Box>
     </Grid>
