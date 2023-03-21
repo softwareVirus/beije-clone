@@ -23,6 +23,7 @@ const Header = () => {
           xs: "0 27px",
           md: "0 144px",
         },
+        boxShadow: 'none'
       }}
     >
       <Container
