@@ -8,26 +8,7 @@ import Tab from "@mui/material/Tab";
 import PadInput from "./slider_inputs/PadInput";
 import DailyPadInput from "./slider_inputs/DailyPadInput";
 import TamponInput from "./slider_inputs/TamponInput";
-
-const styles = {
-  firstBox: {
-    width: "564px",
-    gap: "4.5rem",
-  },
-  displayBox: {
-    display: "flex",
-    alignItems: "flex-start",
-    flexDirection: "column",
-    padding: 0,
-    width: "100%",
-  },
-  inputBox: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "2.5rem",
-    width: "100%",
-  },
-};
+import { styles } from "@/utils/style";
 
 const marks = [
   {
