@@ -15,7 +15,9 @@ const Footer = () => {
           xs: '24px'
         }
       }}>
-
+        <Box component={'footer'}>
+          
+        </Box>
       </Box>
     </Grid>
   )
