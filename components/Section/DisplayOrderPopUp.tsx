@@ -29,7 +29,9 @@ export default function DisplayOrderPopUp() {
       aria-labelledby="modal-modal-title"
       aria-describedby="modal-modal-description"
     >
-      <DisplayOrder />
+      <Box>
+        
+      </Box>
     </Modal>
   );
 }
