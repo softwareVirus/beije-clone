@@ -5,7 +5,10 @@ import Link from "next/link";
 import { Link as MuiLink } from "@mui/material";
 import React, { useContext } from "react";
 import Image from "next/image";
-import { HeaderPopoverContext } from "@/contexts/muiComponentContext";
+import {
+  HeaderPopoverContext,
+  HeaderPopoverTypeContext,
+} from "@/contexts/muiComponentContext";
 
 const style = {
   "&:hover": {
@@ -17,6 +20,9 @@ const style = {
 const Header = () => {
   const { isHeaderPopoverOpen, setIsHeaderPopoverOpen } =
     useContext(HeaderPopoverContext);
+  const { headerPopoverType, setHeaderPopoverType } = useContext(
+    HeaderPopoverTypeContext
+  );
   const handlePopoverOpen = (event: React.MouseEvent<HTMLElement>) => {
     const open = Boolean(event.currentTarget);
     setIsHeaderPopoverOpen(open);
@@ -35,8 +41,8 @@ const Header = () => {
           md: "0 144px",
         },
         boxShadow: "none",
-        overflow:'hidden',
-        zIndex:1
+        overflow: "hidden",
+        zIndex: 1,
       }}
     >
       <Container
@@ -95,13 +101,36 @@ const Header = () => {
           <Typography
             aria-owns={isHeaderPopoverOpen ? "mouse-over-popover" : undefined}
             aria-haspopup="true"
-            onMouseEnter={handlePopoverOpen}
+            onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
+              handlePopoverOpen(e);
+              setHeaderPopoverType("product");
+            }}
             sx={style}
           >
             Ürünler
           </Typography>
-          <Typography sx={style}>Biz Kimiz</Typography>
-          <Typography sx={style}>Bağış Kültürü</Typography>
+          <Typography
+            sx={style}
+            aria-owns={isHeaderPopoverOpen ? "mouse-over-popover" : undefined}
+            aria-haspopup="true"
+            onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
+              handlePopoverOpen(e);
+              setHeaderPopoverType("whoWeAre");
+            }}
+          >
+            Biz Kimiz
+          </Typography>
+          <Typography
+            sx={style}
+            aria-owns={isHeaderPopoverOpen ? "mouse-over-popover" : undefined}
+            aria-haspopup="true"
+            onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
+              handlePopoverOpen(e);
+              setHeaderPopoverType("donationCulture");
+            }}
+          >
+            Bağış Kültürü
+          </Typography>
           <MuiLink href="/" component={Link} underline="none" color={"inherit"}>
             <Typography>Blog</Typography>
           </MuiLink>

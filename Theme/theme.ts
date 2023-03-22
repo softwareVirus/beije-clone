@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material/styles";
+import darkScrollbar from "@mui/material/darkScrollbar";
 
 declare module "@mui/material/styles" {
   interface TypographyVariants {
@@ -64,6 +65,16 @@ const theme = createTheme({
       lineHeight: "1.625rem",
       letterSpacing: "-0.03em",
     },
+    h5: {
+      margin: 0,
+      fontWeight: 500,
+      fontSize: "1.25rem",
+      lineHeight: "140%",
+      letterSpacing: "-0.015",
+      display: "flex",
+      alignItems: "center",
+      cursor: "pointer",
+    },
   },
   breakpoints: {
     values: {
@@ -84,11 +95,11 @@ const theme = createTheme({
           maxWidth: "100%",
           boxShadow: "none",
           overflowY: "scroll",
-          position:'relative',
+          position: "relative",
         },
         root: {
           top: "80px !important",
-          overflow:'hidden'
+          overflow: "hidden",
         },
       },
     },
@@ -176,6 +187,23 @@ const theme = createTheme({
           color: "rgba(255, 255, 255, 0.698)",
         },
       },
+    },
+    MuiCssBaseline: {
+      styleOverrides: (themeParam) => ({
+        body:{
+          scrollbarColor: "rgb(77, 77, 77) #f5f5f5",
+          "&::-webkit-scrollbar, & *::-webkit-scrollbar": {
+              "backgroundColor": "#f5f5f5",
+              "width" :'5px !important',
+          }
+          ,
+          "&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb": {
+              "borderRadius": 8,
+              "backgroundColor": "#3B3B3B",
+              "border": "2px solid #3B3B3B",
+          },
+      } ,
+      }),
     },
   },
   palette: {

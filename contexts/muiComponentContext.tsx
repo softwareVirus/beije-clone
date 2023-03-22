@@ -28,22 +28,42 @@ const HeaderPopoverContext = createContext<HeaderPopoverProps>({
   setIsHeaderPopoverOpen: () => {},
 });
 
+interface HeaderPopoverTypeProps {
+  headerPopoverType: string;
+  setHeaderPopoverType: Dispatch<SetStateAction<string>>;
+}
+
+const HeaderPopoverTypeContext = createContext<HeaderPopoverTypeProps>({
+  headerPopoverType: "product",
+  setHeaderPopoverType: () => {},
+});
+
 const MuiComponentContext = ({ children }: CustomContextProviderProps) => {
   const [isDisplayOrderOpen, setIsDisplayOrderOpen] = useState<boolean>(false);
   const [isHeaderPopoverOpen, setIsHeaderPopoverOpen] =
     useState<boolean>(false);
+  const [headerPopoverType, setHeaderPopoverType] = useState<string>("product");
 
   return (
-    <HeaderPopoverContext.Provider
-      value={{ isHeaderPopoverOpen, setIsHeaderPopoverOpen }}
+    <HeaderPopoverTypeContext.Provider
+      value={{ headerPopoverType, setHeaderPopoverType }}
     >
-      <DisplayOrderContext.Provider
-        value={{ isDisplayOrderOpen, setIsDisplayOrderOpen }}
+      <HeaderPopoverContext.Provider
+        value={{ isHeaderPopoverOpen, setIsHeaderPopoverOpen }}
       >
-        {children}
-      </DisplayOrderContext.Provider>
-    </HeaderPopoverContext.Provider>
+        <DisplayOrderContext.Provider
+          value={{ isDisplayOrderOpen, setIsDisplayOrderOpen }}
+        >
+          {children}
+        </DisplayOrderContext.Provider>
+      </HeaderPopoverContext.Provider>
+    </HeaderPopoverTypeContext.Provider>
   );
 };
 
-export { MuiComponentContext, DisplayOrderContext, HeaderPopoverContext };
+export {
+  MuiComponentContext,
+  DisplayOrderContext,
+  HeaderPopoverContext,
+  HeaderPopoverTypeContext,
+};
