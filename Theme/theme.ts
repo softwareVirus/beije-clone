@@ -57,12 +57,12 @@ const theme = createTheme({
       color: "rgba(255, 255, 255, 0.698)",
     },
     mobileH2: {
-      margin:0,
+      margin: 0,
       fontWeight: 500,
-      fontSize:'1.375rem',
-      fontFamily:'Gordita',
-      lineHeight: '1.625rem',
-      letterSpacing: '-0.03em'
+      fontSize: "1.375rem",
+      fontFamily: "Gordita",
+      lineHeight: "1.625rem",
+      letterSpacing: "-0.03em",
     },
   },
   breakpoints: {
@@ -75,6 +75,30 @@ const theme = createTheme({
     },
   },
   components: {
+    MuiPopover: {
+      styleOverrides: {
+        paper: {
+          width: "100%",
+          left: "0 !important",
+          top: "0 !important",
+          maxWidth: "100%",
+          boxShadow: "none",
+          overflowY: "scroll",
+          position:'relative',
+        },
+        root: {
+          top: "80px !important",
+          overflow:'hidden'
+        },
+      },
+    },
+    MuiBackdrop: {
+      styleOverrides: {
+        root: {
+          top: "80px !important",
+        },
+      },
+    },
     MuiTabs: {
       styleOverrides: {
         scroller: {

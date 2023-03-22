@@ -3,8 +3,9 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Link from "next/link";
 import { Link as MuiLink } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
+import { HeaderPopoverContext } from "@/contexts/muiComponentContext";
 
 const style = {
   "&:hover": {
@@ -14,6 +15,16 @@ const style = {
 };
 
 const Header = () => {
+  const { isHeaderPopoverOpen, setIsHeaderPopoverOpen } =
+    useContext(HeaderPopoverContext);
+  const handlePopoverOpen = (event: React.MouseEvent<HTMLElement>) => {
+    const open = Boolean(event.currentTarget);
+    setIsHeaderPopoverOpen(open);
+  };
+
+  const handlePopoverClose = () => {
+    setIsHeaderPopoverOpen(false);
+  };
   return (
     <AppBar
       elevation={4}
@@ -23,7 +34,9 @@ const Header = () => {
           xs: "0 27px",
           md: "0 144px",
         },
-        boxShadow: 'none'
+        boxShadow: "none",
+        overflow:'hidden',
+        zIndex:1
       }}
     >
       <Container
@@ -79,7 +92,14 @@ const Header = () => {
             gap: 4,
           }}
         >
-          <Typography sx={style}>Ürünler</Typography>
+          <Typography
+            aria-owns={isHeaderPopoverOpen ? "mouse-over-popover" : undefined}
+            aria-haspopup="true"
+            onMouseEnter={handlePopoverOpen}
+            sx={style}
+          >
+            Ürünler
+          </Typography>
           <Typography sx={style}>Biz Kimiz</Typography>
           <Typography sx={style}>Bağış Kültürü</Typography>
           <MuiLink href="/" component={Link} underline="none" color={"inherit"}>
@@ -98,16 +118,24 @@ const Header = () => {
               sx={{
                 height: 32,
                 width: 32,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
               <Image src="/cart.svg" width={24} height={24} alt="cart" />
             </Badge>
           </MuiLink>
           <MuiLink href="/" component={Link} underline="none" color={"inherit"}>
-            <Grid container sx={{width:32,height:32, justifyContent: 'center', alignItems: 'center'}}>
+            <Grid
+              container
+              sx={{
+                width: 32,
+                height: 32,
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <Image src="/profil.svg" width={24} height={24} alt="profil" />
             </Grid>
           </MuiLink>
