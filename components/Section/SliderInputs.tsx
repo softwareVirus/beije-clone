@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
@@ -11,6 +11,8 @@ import TamponInput from "./slider_inputs/TamponInput";
 import { styles } from "@/utils/style";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import DisplayOrderPopUp from "./DisplayOrderPopUp";
+import { DisplayOrderContext } from "@/contexts/muiComponentContext";
 
 const marks = [
   {
@@ -56,6 +58,11 @@ const SliderInputs = () => {
   const [value, setValue] = useState<number>(0);
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("md"));
+  const { isDisplayOrderOpen, setIsDisplayOrderOpen } =
+    useContext(DisplayOrderContext);
+  const handleOpen = () => {
+    setIsDisplayOrderOpen(true)
+  };
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
@@ -128,9 +135,12 @@ const SliderInputs = () => {
         </Grid>
       </Grid>
       {matches && (
-        <Button variant="contained" color="primary">
-          Paketi Gör
-        </Button>
+        <>
+          <Button variant="contained" color="primary" onClick={handleOpen}>
+            Paketi Gör
+          </Button>
+          <DisplayOrderPopUp />
+        </>
       )}
     </Box>
   );
