@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  sizeDailyPadOrder,
-  sizePadOrder,
-  sizeTamponOrder,
-} from "./calculateCost";
+import { sizeOfOrder } from "./calculateCost";
 import { padProperties } from "@/types/order";
 import { dailyPadProperties } from "@/types/order";
 import { tamponProperties } from "@/types/order";
@@ -20,6 +16,7 @@ const OrderButton = ({
   dailyPadInputs,
   tamponInputs,
 }: OrderButtonProps) => {
+  const { sizeDailyPadOrder, sizePadOrder, sizeTamponOrder } = sizeOfOrder();
   return (
     <Button
       variant="contained"

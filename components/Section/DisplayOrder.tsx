@@ -9,11 +9,7 @@ import {
 import Image from "next/image";
 import { styles } from "@/utils/style";
 import InfoSection from "./display_order/InfoSection";
-import {
-  sizeDailyPadOrder,
-  sizePadOrder,
-  sizeTamponOrder,
-} from "./display_order/calculateCost";
+import { sizeOfOrder } from "./display_order/calculateCost";
 import OrderCard from "./display_order/OrderCard";
 import OrderButton from "./display_order/OrderButton";
 
@@ -21,6 +17,7 @@ const DisplayOrder = () => {
   const { padInputs, setPadInputs } = useContext(PadContext);
   const { dailyPadInputs, setDailyPadInputs } = useContext(DailyPadContext);
   const { tamponInputs, setTamponInputs } = useContext(TamponContext);
+  const { sizeDailyPadOrder, sizePadOrder, sizeTamponOrder } = sizeOfOrder();
 
   const handleDeletePadOrder = () => {
     setPadInputs({
