@@ -164,35 +164,39 @@ const MobilePageTemplate = () => {
         );
       })}
       {headerPopoverType === "product" && (
-        <Box
-          sx={{
-            pl: 4,
-            pr: 4,
-            mt: headerPopoverType === "product" ? 1 : 0,
-            mb: headerPopoverType === "product" ? 1 : 0,
-          }}
-        >
-          <hr
-            style={{
-              backgroundColor: "rgb(52, 49, 49)",
-              opacity: "0.3",
+        <>
+          <Box
+            sx={{
+              pl: 4,
+              pr: 4,
+              mt: headerPopoverType === "product" ? 1 : 0,
+              mb: headerPopoverType === "product" ? 1 : 0,
             }}
-          />
-        </Box>
+          >
+            <hr
+              style={{
+                backgroundColor: "rgb(52, 49, 49)",
+                opacity: "0.3",
+              }}
+            />
+          </Box>
+          <Button
+            sx={{
+              ml: 4,
+              p: "10px 8px 8px",
+            }}
+          >
+            <Image
+              src={"./header_icons/setting.svg"}
+              alt={"setting"}
+              width={24}
+              height={24}
+              style={{ marginRight: "8px" }}
+            />
+            Kendi Paketini Oluştur
+          </Button>
+        </>
       )}
-      <Button sx={{
-        ml:4,
-        p:'10px 8px 8px'
-      }}>
-        <Image 
-            src={'./header_icons/setting.svg'}
-            alt={'setting'}
-            width={24}
-            height={24}
-            style={{marginRight:'8px'}}
-        />
-        Kendi Paketini Oluştur
-      </Button>
     </Grid>
   );
 };
