@@ -14,6 +14,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from '@mui/icons-material/Clear';
+import { OrderContext } from "@/contexts/customContext";
 
 const style = {
   "&:hover": {
@@ -30,6 +31,7 @@ const Header = () => {
   const { headerPopoverType, setHeaderPopoverType } = useContext(
     HeaderPopoverTypeContext
   );
+  const { order } = useContext(OrderContext)
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("md"));
   const handlePopoverOpen = (event: React.MouseEvent<HTMLElement>) => {
@@ -173,6 +175,8 @@ const Header = () => {
           <MuiLink href="/" component={Link} underline="none" color={"inherit"}>
             <IconButton sx={{ p: 0 }}>
               <Badge
+                badgeContent={order.total.length}
+                color="success"
                 sx={{
                   height: 32,
                   width: 32,

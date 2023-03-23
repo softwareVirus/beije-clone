@@ -13,11 +13,11 @@ interface CustomContextProviderProps {
 }
 
 interface orderProperties {
-  order:{
+  total: [{
         padInputs: padProperties;
         dailyPadInputs: dailyPadProperties;
         tamponInputs: tamponProperties;
-      }[]
+      }]
     | [];
 }
 
@@ -67,7 +67,7 @@ const TamponContext = createContext<tamponContextProps>({
 
 const OrderContext = createContext<orderContextProps>({
   order: {
-    order: [],
+    total: [],
   },
   setOrder: () => {},
 });
@@ -86,7 +86,7 @@ const CustomContextProvider = ({ children }: CustomContextProviderProps) => {
     miniTampon: 0,
     standardTampon: 0,
   });
-  const [order, setOrder] = useState<orderProperties>({ order: [] });
+  const [order, setOrder] = useState<orderProperties>({ total: [] });
   return (
     <OrderContext.Provider value={{ order, setOrder }}>
       <PadContext.Provider value={{ padInputs, setPadInputs }}>
@@ -100,4 +100,10 @@ const CustomContextProvider = ({ children }: CustomContextProviderProps) => {
   );
 };
 
-export { CustomContextProvider, PadContext, DailyPadContext, TamponContext };
+export {
+  CustomContextProvider,
+  PadContext,
+  DailyPadContext,
+  TamponContext,
+  OrderContext,
+};

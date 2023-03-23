@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { sizeOfOrder } from "./calculateCost";
 import { padProperties } from "@/types/order";
 import { dailyPadProperties } from "@/types/order";
 import { tamponProperties } from "@/types/order";
 import { Button } from "@mui/material";
-
+import {
+  OrderContext,
+  PadContext,
+  DailyPadContext,
+  TamponContext,
+} from "@/contexts/customContext";
 interface OrderButtonProps {
   padInputs: padProperties;
   dailyPadInputs: dailyPadProperties;
@@ -17,6 +22,31 @@ const OrderButton = ({
   tamponInputs,
 }: OrderButtonProps) => {
   const { sizeDailyPadOrder, sizePadOrder, sizeTamponOrder } = sizeOfOrder();
+  const { order, setOrder } = useContext(OrderContext);
+  const { setPadInputs } = useContext(PadContext);
+  const { setDailyPadInputs } = useContext(DailyPadContext);
+  const { setTamponInputs } = useContext(TamponContext);
+
+  const handleDeletePadOrder = () => {
+    setPadInputs({
+      standardPad: 0,
+      superPad: 0,
+      superPlusPad: 0,
+    });
+  };
+  const handleDeleteDailyPadOrder = () => {
+    setDailyPadInputs({
+      dailyPad: 0,
+      superDailyPad: 0,
+    });
+  };
+
+  const handleDeleteTamponOrder = () => {
+    setTamponInputs({
+      miniTampon: 0,
+      standardTampon: 0,
+    });
+  };
   return (
     <Button
       variant="contained"
@@ -24,6 +54,21 @@ const OrderButton = ({
       disabled={
         sizePadOrder === 0 && sizeDailyPadOrder === 0 && sizeTamponOrder === 0
       }
+      onClick={() => {
+        setOrder((prevState) => ({
+          ...prevState,
+          total: [
+            {
+              padInputs: padInputs,
+              dailyPadInputs: dailyPadInputs,
+              tamponInputs: tamponInputs,
+            },
+          ],
+        }));
+        handleDeletePadOrder();
+        handleDeleteDailyPadOrder();
+        handleDeleteTamponOrder();
+      }}
     >
       Sepete Ekle (₺
       {sizePadOrder === 0 && sizeDailyPadOrder === 0 && sizeTamponOrder === 0
