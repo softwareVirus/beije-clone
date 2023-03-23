@@ -34,30 +34,46 @@ interface HeaderPopoverTypeProps {
 }
 
 const HeaderPopoverTypeContext = createContext<HeaderPopoverTypeProps>({
-  headerPopoverType: "product",
+  headerPopoverType: "",
   setHeaderPopoverType: () => {},
+});
+
+interface HeaderPopoverMobileProps {
+  isHeaderPopoverMobileOpen: boolean;
+  setIsHeaderPopoverMobileOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+const HeaderPopoverMobileContext = createContext<HeaderPopoverMobileProps>({
+  isHeaderPopoverMobileOpen: false,
+  setIsHeaderPopoverMobileOpen: () => {},
 });
 
 const MuiComponentContext = ({ children }: CustomContextProviderProps) => {
   const [isDisplayOrderOpen, setIsDisplayOrderOpen] = useState<boolean>(false);
   const [isHeaderPopoverOpen, setIsHeaderPopoverOpen] =
     useState<boolean>(false);
-  const [headerPopoverType, setHeaderPopoverType] = useState<string>("product");
+  const [isHeaderPopoverMobileOpen, setIsHeaderPopoverMobileOpen] =
+    useState<boolean>(false);
+  const [headerPopoverType, setHeaderPopoverType] = useState<string>("");
 
   return (
-    <HeaderPopoverTypeContext.Provider
-      value={{ headerPopoverType, setHeaderPopoverType }}
+    <HeaderPopoverMobileContext.Provider
+      value={{ isHeaderPopoverMobileOpen, setIsHeaderPopoverMobileOpen }}
     >
-      <HeaderPopoverContext.Provider
-        value={{ isHeaderPopoverOpen, setIsHeaderPopoverOpen }}
+      <HeaderPopoverTypeContext.Provider
+        value={{ headerPopoverType, setHeaderPopoverType }}
       >
-        <DisplayOrderContext.Provider
-          value={{ isDisplayOrderOpen, setIsDisplayOrderOpen }}
+        <HeaderPopoverContext.Provider
+          value={{ isHeaderPopoverOpen, setIsHeaderPopoverOpen }}
         >
-          {children}
-        </DisplayOrderContext.Provider>
-      </HeaderPopoverContext.Provider>
-    </HeaderPopoverTypeContext.Provider>
+          <DisplayOrderContext.Provider
+            value={{ isDisplayOrderOpen, setIsDisplayOrderOpen }}
+          >
+            {children}
+          </DisplayOrderContext.Provider>
+        </HeaderPopoverContext.Provider>
+      </HeaderPopoverTypeContext.Provider>
+    </HeaderPopoverMobileContext.Provider>
   );
 };
 
@@ -66,4 +82,5 @@ export {
   DisplayOrderContext,
   HeaderPopoverContext,
   HeaderPopoverTypeContext,
+  HeaderPopoverMobileContext,
 };

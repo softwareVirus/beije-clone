@@ -8,6 +8,7 @@ import Section from '@/components/Section';
 import Footer from '@/components/Footer';
 import PopoverMenuProduct from '@/components/Header/PopoverMenuProduct';
 import { Grid } from '@mui/material';
+import PopoverMenuMobile from '@/components/Header/PopoverMenuMobile';
 
 
 export default function Home() {
@@ -22,8 +23,11 @@ export default function Home() {
       <main style={{backgroundColor: 'white'}}>
         <ThemeProvider theme={theme}>
           <Header/>
-          <Grid sx={{overflow: 'hidden', top: '80px', position: 'relative'}}>
+          <Grid>
           <PopoverMenuProduct />
+          </Grid>
+          <Grid>
+          <PopoverMenuMobile />
           </Grid>
           <Section />
           <Footer />

@@ -98,7 +98,7 @@ const theme = createTheme({
           position: "relative",
         },
         root: {
-          top: "80px !important",
+          top: '80px',
           overflow: "hidden",
         },
       },

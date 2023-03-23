@@ -31,6 +31,7 @@ export default function PopoverMenuProduct() {
   const handlePopoverClose = (event: React.MouseEvent<HTMLElement>) => {
     console.log(darkScrollbar());
     setIsHeaderPopoverOpen(event.pageY <= 80);
+    setHeaderPopoverType('');
   };
   const open = isHeaderPopoverOpen;
 

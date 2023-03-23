@@ -7,11 +7,13 @@ import React, { useContext } from "react";
 import Image from "next/image";
 import {
   HeaderPopoverContext,
+  HeaderPopoverMobileContext,
   HeaderPopoverTypeContext,
 } from "@/contexts/muiComponentContext";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
+import ClearIcon from '@mui/icons-material/Clear';
 
 const style = {
   "&:hover": {
@@ -21,6 +23,8 @@ const style = {
 };
 
 const Header = () => {
+  const { isHeaderPopoverMobileOpen, setIsHeaderPopoverMobileOpen } =
+    useContext(HeaderPopoverMobileContext);
   const { isHeaderPopoverOpen, setIsHeaderPopoverOpen } =
     useContext(HeaderPopoverContext);
   const { headerPopoverType, setHeaderPopoverType } = useContext(
@@ -197,9 +201,22 @@ const Header = () => {
             </IconButton>
           </MuiLink>
           <Grid container alignContent={"center"}>
-            <IconButton sx={{ p: 0 }}>
-              <MenuIcon />
-            </IconButton>
+            {!matches && (
+              isHeaderPopoverMobileOpen
+              ?
+              <IconButton sx={{ p: 0 }} onClick={() => {
+                setIsHeaderPopoverMobileOpen(false)
+                setHeaderPopoverType('')
+              }}>
+                <ClearIcon />
+              </IconButton>
+              :
+              <IconButton sx={{ p: 0 }} onClick={() => {
+                setIsHeaderPopoverMobileOpen(true)
+              }}>
+                <MenuIcon />
+              </IconButton>
+            )}
           </Grid>
         </Box>
       </Container>

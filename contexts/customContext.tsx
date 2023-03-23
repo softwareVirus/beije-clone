@@ -12,6 +12,19 @@ interface CustomContextProviderProps {
   children: ReactNode;
 }
 
+interface orderProperties {
+  order:{
+        padInputs: padProperties;
+        dailyPadInputs: dailyPadProperties;
+        tamponInputs: tamponProperties;
+      }[]
+    | [];
+}
+
+interface orderContextProps {
+  order: orderProperties;
+  setOrder: Dispatch<SetStateAction<orderProperties>>;
+}
 interface padContextProps {
   padInputs: padProperties;
   setPadInputs: Dispatch<SetStateAction<padProperties>>;
@@ -52,6 +65,13 @@ const TamponContext = createContext<tamponContextProps>({
   setTamponInputs: () => {},
 });
 
+const OrderContext = createContext<orderContextProps>({
+  order: {
+    order: [],
+  },
+  setOrder: () => {},
+});
+
 const CustomContextProvider = ({ children }: CustomContextProviderProps) => {
   const [padInputs, setPadInputs] = useState<padProperties>({
     standardPad: 0,
@@ -66,15 +86,17 @@ const CustomContextProvider = ({ children }: CustomContextProviderProps) => {
     miniTampon: 0,
     standardTampon: 0,
   });
-
+  const [order, setOrder] = useState<orderProperties>({ order: [] });
   return (
-    <PadContext.Provider value={{ padInputs, setPadInputs }}>
-      <DailyPadContext.Provider value={{ dailyPadInputs, setDailyPadInputs }}>
-        <TamponContext.Provider value={{ tamponInputs, setTamponInputs }}>
-          {children}
-        </TamponContext.Provider>
-      </DailyPadContext.Provider>
-    </PadContext.Provider>
+    <OrderContext.Provider value={{ order, setOrder }}>
+      <PadContext.Provider value={{ padInputs, setPadInputs }}>
+        <DailyPadContext.Provider value={{ dailyPadInputs, setDailyPadInputs }}>
+          <TamponContext.Provider value={{ tamponInputs, setTamponInputs }}>
+            {children}
+          </TamponContext.Provider>
+        </DailyPadContext.Provider>
+      </PadContext.Provider>
+    </OrderContext.Provider>
   );
 };
 
