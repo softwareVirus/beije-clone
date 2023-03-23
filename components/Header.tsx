@@ -175,7 +175,7 @@ const Header = () => {
           <MuiLink href="/" component={Link} underline="none" color={"inherit"}>
             <IconButton sx={{ p: 0 }}>
               <Badge
-                badgeContent={order.total.length}
+                badgeContent={order.length}
                 color="success"
                 sx={{
                   height: 32,

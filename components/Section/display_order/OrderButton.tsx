@@ -21,7 +21,11 @@ const OrderButton = ({
   dailyPadInputs,
   tamponInputs,
 }: OrderButtonProps) => {
-  const { sizeDailyPadOrder, sizePadOrder, sizeTamponOrder } = sizeOfOrder({ padInputs, dailyPadInputs,tamponInputs });
+  const { sizeDailyPadOrder, sizePadOrder, sizeTamponOrder } = sizeOfOrder({
+    padInputs,
+    dailyPadInputs,
+    tamponInputs,
+  });
   const { order, setOrder } = useContext(OrderContext);
   const { setPadInputs } = useContext(PadContext);
   const { setDailyPadInputs } = useContext(DailyPadContext);
@@ -55,16 +59,19 @@ const OrderButton = ({
         sizePadOrder === 0 && sizeDailyPadOrder === 0 && sizeTamponOrder === 0
       }
       onClick={() => {
-        setOrder((prevState) => ({
-          ...prevState,
-          total: [
-            {
-              padInputs: padInputs,
-              dailyPadInputs: dailyPadInputs,
-              tamponInputs: tamponInputs,
-            },
-          ],
-        }));
+        const newOrder: Array<{
+          padInputs: padProperties;
+          dailyPadInputs: dailyPadProperties;
+          tamponInputs: tamponProperties;
+        }> = [
+          ...order,
+          {
+            padInputs: padInputs,
+            dailyPadInputs: dailyPadInputs,
+            tamponInputs: tamponInputs,
+          },
+        ];
+        setOrder(newOrder);
         handleDeletePadOrder();
         handleDeleteDailyPadOrder();
         handleDeleteTamponOrder();
