@@ -4,11 +4,15 @@ import {
   DailyPadContext,
   TamponContext,
 } from "@/contexts/customContext";
+import { dailyPadProperties, padProperties, tamponProperties } from "@/types/order";
 
-export const sizeOfOrder = () => {
-  const { padInputs } = useContext(PadContext);
-  const { dailyPadInputs } = useContext(DailyPadContext);
-  const { tamponInputs } = useContext(TamponContext);
+interface sizeOfOrderProps {
+    padInputs: padProperties
+    dailyPadInputs: dailyPadProperties
+    tamponInputs: tamponProperties
+}
+
+export const sizeOfOrder = ({ padInputs, dailyPadInputs,tamponInputs }: sizeOfOrderProps) => {
 
   const sizePadOrder: number =
     (padInputs.standardPad !== 0 ? 1 : 0) +
