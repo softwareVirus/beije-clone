@@ -15,6 +15,11 @@ interface TransitionProps {
   children: React.ReactElement<any, any>;
 }
 
+const SlideRTL = React.forwardRef((props: TransitionProps, ref) => (
+  <Slide direction="left" ref={ref} {...props} />
+));
+SlideRTL.displayName = "SlideRTL";
+
 const PopoverMenuMobile = () => {
   const { isHeaderPopoverMobileOpen, setIsHeaderPopoverMobileOpen } =
     useContext(HeaderPopoverMobileContext);
@@ -24,7 +29,7 @@ const PopoverMenuMobile = () => {
   const data = popoverMenuData(headerPopoverType);
   const handlePopoverClose = (event: React.MouseEvent<HTMLElement>) => {
     setIsHeaderPopoverMobileOpen(false);
-    setHeaderPopoverType('')
+    setHeaderPopoverType("");
   };
 
   return (
@@ -54,9 +59,7 @@ const PopoverMenuMobile = () => {
             "rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px",
         },
       }}
-      TransitionComponent={React.forwardRef((props: TransitionProps, ref) => (
-        <Slide direction="left" ref={ref} {...props} />
-      ))}
+      TransitionComponent={SlideRTL}
       onClose={handlePopoverClose}
       style={{ zIndex: 2 }}
     >
@@ -75,17 +78,11 @@ const PopoverMenuMobile = () => {
           }}
         >
           <CssBaseline />
-          {
-            headerPopoverType === ''
-            ?
-            <MobileMenu />
-            :
-            <MobilePage />
-          }
+          {headerPopoverType === "" ? <MobileMenu /> : <MobilePage />}
         </Container>
       </Grid>
     </Popover>
   );
-}
+};
 
-export default PopoverMenuMobile
+export default PopoverMenuMobile;
