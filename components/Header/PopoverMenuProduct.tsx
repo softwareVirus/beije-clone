@@ -89,6 +89,7 @@ export default function PopoverMenuProduct() {
                         xs: 0,
                       },
                     }}
+                    key={'flex'+index}
                   >
                     <Grid
                       container
@@ -117,6 +118,7 @@ export default function PopoverMenuProduct() {
                           return (
                             <Grid
                               item
+                              key={images+index}
                               xs={12}
                               md={
                                 headerPopoverType === "whoWeAre" ||

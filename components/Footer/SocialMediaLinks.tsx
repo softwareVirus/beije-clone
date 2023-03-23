@@ -51,6 +51,7 @@ const SocialMediaLinks = () => {
               color: "inherit",
               textDecoration: "none",
             }}
+            key={"_blank"+index}
           >
             <Grid
               sx={{
