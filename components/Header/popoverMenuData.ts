@@ -26,16 +26,25 @@ export default function popoverMenuData(type: string) {
         {
           title: "Paketler",
           imageLinks: [
+            "https://beije.co/_next/image?url=%2Fimages%2Fnav%2Fpackets_all.png&w=1920&q=75",
             "https://beije.co/_next/image?url=https%3A%2F%2Fapi.beije.co%2Fcatalog_service%2Fv1%2Fimage%2FpacketType%2Fslug%2Fpads%3Fvariant%3Dheader&w=1920&q=75",
             "https://beije.co/_next/image?url=https%3A%2F%2Fapi.beije.co%2Fcatalog_service%2Fv1%2Fimage%2FpacketType%2Fslug%2Fpantyliner%3Fvariant%3Dheader&w=1920&q=75",
             "https://beije.co/_next/image?url=https%3A%2F%2Fapi.beije.co%2Fcatalog_service%2Fv1%2Fimage%2FpacketType%2Fslug%2Ftampons%3Fvariant%3Dheader&w=1920&q=75",
-            "https://beije.co/_next/image?url=%2Fimages%2Fnav%2Fpackets_all.png&w=1920&q=75",
+            "https://beije.co/_next/image?url=%2Fimages%2Fnav%2Ftrial-pack.png&w=1920&q=75"
           ],
           subtitles: [
+            "Popüler Paketler",
             "Ped Paketleri",
             "Günlük Ped Paketleri",
             "Tampon Paketleri",
-            "Tüm Paketler",
+            "Deneme Paketleri",
+          ],
+          iconsDir: [
+            "./header_icons/packet.svg",
+            "./header_icons/pad.svg",
+            "./header_icons/dailyPad.svg",
+            "./header_icons/tampon.svg",
+            "./header_icons/bag.svg",
           ],
         },
       ],
@@ -59,6 +68,7 @@ export default function popoverMenuData(type: string) {
             "Sıkça Sorulan Sorular",
             "Tüm Malzemeler",
           ],
+          iconsDir: [],
         },
       ],
     };
@@ -72,6 +82,7 @@ export default function popoverMenuData(type: string) {
             "https://beije.co/_next/image?url=%2Fimages%2Fnav%2Fdonation-pad.webp&w=1920&q=75",
           ],
           subtitles: ["Felsefemiz", "Askıda Ped"],
+          iconsDir: [],
         },
       ],
     };

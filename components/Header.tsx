@@ -1,4 +1,4 @@
-import { AppBar, Typography, Badge, Grid } from "@mui/material";
+import { AppBar, Typography, Badge, Grid, IconButton } from "@mui/material";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Link from "next/link";
@@ -9,6 +9,9 @@ import {
   HeaderPopoverContext,
   HeaderPopoverTypeContext,
 } from "@/contexts/muiComponentContext";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const style = {
   "&:hover": {
@@ -23,6 +26,8 @@ const Header = () => {
   const { headerPopoverType, setHeaderPopoverType } = useContext(
     HeaderPopoverTypeContext
   );
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("md"));
   const handlePopoverOpen = (event: React.MouseEvent<HTMLElement>) => {
     const open = Boolean(event.currentTarget);
     setIsHeaderPopoverOpen(open);
@@ -58,9 +63,16 @@ const Header = () => {
           },
           gap: 3,
           margin: "0 auto",
-          height: 80,
+          height: {
+            md: 80,
+            xs: 64,
+          },
           display: "flex",
           alignItems: "center",
+          justifyContent: {
+            md: "center",
+            xs: "space-between",
+          },
         }}
       >
         <Box
@@ -90,84 +102,105 @@ const Header = () => {
             />
           </MuiLink>
         </Box>
-        <Box
-          component={"nav"}
-          sx={{
-            display: "flex",
-            flexGrow: 1,
-            gap: 4,
-          }}
-        >
-          <Typography
-            aria-owns={isHeaderPopoverOpen ? "mouse-over-popover" : undefined}
-            aria-haspopup="true"
-            onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
-              handlePopoverOpen(e);
-              setHeaderPopoverType("product");
-            }}
-            sx={style}
-          >
-            Ürünler
-          </Typography>
-          <Typography
-            sx={style}
-            aria-owns={isHeaderPopoverOpen ? "mouse-over-popover" : undefined}
-            aria-haspopup="true"
-            onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
-              handlePopoverOpen(e);
-              setHeaderPopoverType("whoWeAre");
+        {matches && (
+          <Box
+            component={"nav"}
+            sx={{
+              display: "flex",
+              flexGrow: 1,
+              gap: 4,
             }}
           >
-            Biz Kimiz
-          </Typography>
-          <Typography
-            sx={style}
-            aria-owns={isHeaderPopoverOpen ? "mouse-over-popover" : undefined}
-            aria-haspopup="true"
-            onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
-              handlePopoverOpen(e);
-              setHeaderPopoverType("donationCulture");
-            }}
-          >
-            Bağış Kültürü
-          </Typography>
-          <MuiLink href="/" component={Link} underline="none" color={"inherit"}>
-            <Typography>Blog</Typography>
-          </MuiLink>
-          <MuiLink href="/" component={Link} underline="none" color={"inherit"}>
-            <Typography>Kendi Paketini Oluştur!</Typography>
-          </MuiLink>
-        </Box>
+            <Typography
+              aria-owns={isHeaderPopoverOpen ? "mouse-over-popover" : undefined}
+              aria-haspopup="true"
+              onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
+                handlePopoverOpen(e);
+                setHeaderPopoverType("product");
+              }}
+              sx={style}
+            >
+              Ürünler
+            </Typography>
+            <Typography
+              sx={style}
+              aria-owns={isHeaderPopoverOpen ? "mouse-over-popover" : undefined}
+              aria-haspopup="true"
+              onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
+                handlePopoverOpen(e);
+                setHeaderPopoverType("whoWeAre");
+              }}
+            >
+              Biz Kimiz
+            </Typography>
+            <Typography
+              sx={style}
+              aria-owns={isHeaderPopoverOpen ? "mouse-over-popover" : undefined}
+              aria-haspopup="true"
+              onMouseEnter={(e: React.MouseEvent<HTMLElement>) => {
+                handlePopoverOpen(e);
+                setHeaderPopoverType("donationCulture");
+              }}
+            >
+              Bağış Kültürü
+            </Typography>
+            <MuiLink
+              href="/"
+              component={Link}
+              underline="none"
+              color={"inherit"}
+            >
+              <Typography>Blog</Typography>
+            </MuiLink>
+            <MuiLink
+              href="/"
+              component={Link}
+              underline="none"
+              color={"inherit"}
+            >
+              <Typography>Kendi Paketini Oluştur!</Typography>
+            </MuiLink>
+          </Box>
+        )}
         <Box
           component={"nav"}
           sx={{ gap: 2, display: "flex", justifyContent: "flex-end" }}
         >
           <MuiLink href="/" component={Link} underline="none" color={"inherit"}>
-            <Badge
-              sx={{
-                height: 32,
-                width: 32,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              <Image src="/cart.svg" width={24} height={24} alt="cart" />
-            </Badge>
+            <IconButton sx={{ p: 0 }}>
+              <Badge
+                sx={{
+                  height: 32,
+                  width: 32,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Image src="/cart.svg" width={24} height={24} alt="cart" />
+              </Badge>
+            </IconButton>
           </MuiLink>
           <MuiLink href="/" component={Link} underline="none" color={"inherit"}>
-            <Grid
-              container
-              sx={{
-                width: 32,
-                height: 32,
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Image src="/profil.svg" width={24} height={24} alt="profil" />
-            </Grid>
+            <IconButton sx={{ p: 0 }}>
+              <Grid
+                container
+                sx={{
+                  width: 32,
+                  height: 32,
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Image src="/profil.svg" width={24} height={24} alt="profil" />
+              </Grid>
+            </IconButton>
           </MuiLink>
+          <Grid container alignContent={"center"}>
+            <IconButton sx={{ p: 0 }}>
+              <MenuIcon />
+            </IconButton>
+          </Grid>
         </Box>
       </Container>
     </AppBar>
