@@ -115,8 +115,8 @@ const EmailSection = () => {
                 whiteSpace: 'break-spaces'
               }}
             >
-              Abone olarak, beije KVKK ve Gizlilik Politikası'nı kabul ediyor ve
-              beije'den haber almayı onaylıyorum.
+              Abone olarak, beije KVKK ve Gizlilik Politikası&apos;nı kabul ediyor ve
+              beije&apos;den haber almayı onaylıyorum.
             </Typography>
           </Grid>
         </Grid>
