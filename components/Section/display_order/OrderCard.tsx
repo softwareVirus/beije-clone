@@ -59,11 +59,11 @@ const OrderCard = ({
           ? (order.padInputs.standardPad !== 0
               ? `${order.padInputs.standardPad} ${orderType[type][0]}`
               : "") +
-            (sizePadOrder === 3 ? ", " : "") +
+            (sizePadOrder === 3 ? ", " : order.padInputs.standardPad !== 0 && sizePadOrder === 2 ? 've' : '') +
             (order.padInputs.superPad !== 0
               ? `${order.padInputs.superPad} ${orderType[type][1]}`
               : "") +
-            (sizePadOrder >= 2 ? " ve " : "") +
+            (sizePadOrder >= 2 && order.padInputs.standardPad !== 0 ? " ve " : "") +
             (order.padInputs.superPlusPad !== 0
               ? `${order.padInputs.superPlusPad} ${orderType[type][2]}`
               : "")
