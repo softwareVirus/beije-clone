@@ -17,7 +17,7 @@ const DisplayOrder = () => {
   const { padInputs, setPadInputs } = useContext(PadContext);
   const { dailyPadInputs, setDailyPadInputs } = useContext(DailyPadContext);
   const { tamponInputs, setTamponInputs } = useContext(TamponContext);
-  const { sizeDailyPadOrder, sizePadOrder, sizeTamponOrder } = sizeOfOrder();
+  const { sizeDailyPadOrder, sizePadOrder, sizeTamponOrder } = sizeOfOrder({ padInputs, dailyPadInputs,tamponInputs });
 
   const handleDeletePadOrder = () => {
     setPadInputs({

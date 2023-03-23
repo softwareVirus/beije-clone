@@ -21,7 +21,7 @@ const OrderButton = ({
   dailyPadInputs,
   tamponInputs,
 }: OrderButtonProps) => {
-  const { sizeDailyPadOrder, sizePadOrder, sizeTamponOrder } = sizeOfOrder();
+  const { sizeDailyPadOrder, sizePadOrder, sizeTamponOrder } = sizeOfOrder({ padInputs, dailyPadInputs,tamponInputs });
   const { order, setOrder } = useContext(OrderContext);
   const { setPadInputs } = useContext(PadContext);
   const { setDailyPadInputs } = useContext(DailyPadContext);
