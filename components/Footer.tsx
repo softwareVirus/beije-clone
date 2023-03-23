@@ -1,10 +1,10 @@
 import React from "react";
 import { Grid, Box } from "@mui/material";
 import { styles } from "@/utils/style";
-import EmailSection from "./Footer/EmailSection";
-import BeijeLinks from "./Footer/BeijeLinks";
-import SocialMediaLinks from "./Footer/SocialMediaLinks";
-import BottomSection from "./Footer/BottomSection";
+import EmailSection from "./footer_components/EmailSection";
+import BeijeLinks from "./footer_components/BeijeLinks";
+import SocialMediaLinks from "./footer_components/SocialMediaLinks";
+import BottomSection from "./footer_components/BottomSection";
 
 const Footer = () => {
   return (
