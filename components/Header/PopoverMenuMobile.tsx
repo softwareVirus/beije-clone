@@ -15,7 +15,7 @@ interface TransitionProps {
   children: React.ReactElement<any, any>;
 }
 
-export default function PopoverMenuMobile() {
+const PopoverMenuMobile = () => {
   const { isHeaderPopoverMobileOpen, setIsHeaderPopoverMobileOpen } =
     useContext(HeaderPopoverMobileContext);
   const { headerPopoverType, setHeaderPopoverType } = useContext(
@@ -87,3 +87,5 @@ export default function PopoverMenuMobile() {
     </Popover>
   );
 }
+
+export default PopoverMenuMobile
